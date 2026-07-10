@@ -123,13 +123,3 @@ python scripts/export_tasks.py
 cd client
 npm run build
 ```
-
-## Чек-лист (Уровень 1)
-
-- [x] Backend на Express с CRUD-методами
-- [x] Обработка ошибок
-- [x] Код разбит по файлам (routes, controllers, models)
-- [x] Таблица `tasks` создаётся SQL-скриптом
-- [x] React-приложение с формой, таблицей, select статуса и удалением
-- [x] Python-скрипт `export_tasks.py` для экспорта в CSV
-- [x] README с инструкцией по запуску
