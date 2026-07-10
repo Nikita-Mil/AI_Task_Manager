@@ -9,7 +9,7 @@ const Task = sequelize.define('task', {
     },
 
     title: {
-        type: DataTypes.STRING,
+        type: DataTypes.STRING(255),
         allowNull: false
     },
 
@@ -19,9 +19,12 @@ const Task = sequelize.define('task', {
     },
 
     status: {
-        type: DataTypes.ENUM('new', 'in_progress', 'done'),
+        type: DataTypes.STRING(20),
         allowNull: false,
-        defaultValue: 'new'
+        defaultValue: 'new',
+        validate: {
+            isIn: [['new', 'in_progress', 'done']]
+        }
     },
 
     created_at: {
@@ -29,6 +32,9 @@ const Task = sequelize.define('task', {
         allowNull: false,
         defaultValue: DataTypes.NOW
     }
+}, {
+    tableName: 'tasks',
+    timestamps: false
 })
 
 module.exports = {

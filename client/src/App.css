@@ -1,0 +1,167 @@
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #f0f2f5;
+  letter-spacing: -0.02em;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.error-banner {
+  background: #3b1f1f;
+  color: #fca5a5;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border: 1px solid #7f1d1d;
+}
+
+.task-form {
+  background: #1a1d27;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2a2f3a;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.task-form h2,
+.tasks-section h2 {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+  color: #f0f2f5;
+}
+
+.form-row {
+  margin-bottom: 1rem;
+}
+
+.form-row label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  background: #0f1117;
+  color: #e4e6eb;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #6b7280;
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+.task-form button[type='submit'] {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.task-form button[type='submit']:hover {
+  background: #4f46e5;
+}
+
+.tasks-section {
+  background: #1a1d27;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #2a2f3a;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.task-table th,
+.task-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #2a2f3a;
+  color: #d1d5db;
+}
+
+.task-table th {
+  background: #12151c;
+  font-weight: 600;
+  color: #9ca3af;
+}
+
+.task-table tbody tr:hover {
+  background: #12151c;
+}
+
+.task-table select {
+  padding: 0.35rem 0.5rem;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  background: #0f1117;
+  color: #e4e6eb;
+}
+
+.btn-delete {
+  background: #dc2626;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.85rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-delete:hover {
+  background: #b91c1c;
+}
+
+.empty-message,
+.loading {
+  color: #6b7280;
+  text-align: center;
+  padding: 2rem;
+}

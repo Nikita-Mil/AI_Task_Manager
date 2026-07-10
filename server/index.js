@@ -15,7 +15,16 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-app.use('/api', router)
+app.use('/', router)
+
+app.use((req, res) => {
+    res.status(404).json({ message: 'Route not found' })
+})
+
+app.use((err, req, res, next) => {
+    console.error(err)
+    res.status(500).json({ message: 'Internal server error', error: err.message })
+})
 
 const start = async () => {
     try {
